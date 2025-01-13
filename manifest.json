@@ -1,31 +1,33 @@
 {
-	"manifest_version": 2,
-	"name": "Invert Image",
-	"version": "2.6",
+    "manifest_version": 2,
+    "name": "Invert Image",
+    "version": "2.6.2",
 
-	"description": "Inverts color of an image/(any part of a page) to black for night time reading",
-	"homepage_url": "https://github.com/vycb/InvertImage",
+    "browser_specific_settings": {"gecko": {"id": "{a97c38a6-de64-40c1-ab3b-44cca457fc3c}"}},
 
-	"icons": {
-		"48": "icons/icon-48.png",
-		"64": "icons/icon-64.png"
-	},
+    "description": "Inverts color of an image/(any part of a page) to black for night time reading",
+    "homepage_url": "https://github.com/arielherself/InvertImage",
 
-	"content_scripts": [
-		{
-			"matches": ["<all_urls>"],
-			"js": ["main.js"],
-			"all_frames": true
-		}
-	],
+    "icons": {
+        "48": "icons/icon-48.png",
+        "64": "icons/icon-64.png"
+    },
 
-	"background": {
-		"scripts": ["background.js"]
-	},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js"],
+            "all_frames": true
+        }
+    ],
 
-	"permissions": [
-		"contextMenus",
-		"activeTab"
-	]
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "permissions": [
+        "contextMenus",
+        "activeTab"
+    ]
 }
 
